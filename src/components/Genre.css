@@ -39,10 +39,10 @@
 
 .MovieParent{
     display: grid;
-    grid-template-columns: 1vw repeat(5, 289.067px) 1vw;
+    grid-template-columns: 1vw repeat(5, 1fr) 1vw;
     grid-template-rows: 1fr repeat(4, 433.6px) 1fr;
     grid-column-gap: 10px;
-    grid-row-gap: 25px;
+    grid-row-gap: 0px;
 }
 
 .div1 {grid-area: 2 / 2 / 3 / 3;}

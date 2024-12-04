@@ -32,7 +32,7 @@ function Genre(){
                 <div className="gdiv8"><button onClick={() => setGenre('35')} id="genre">Comedy</button></div>
                 <div className="gdiv9"><button onClick={() => setGenre('16')} id="genre">Animation</button></div>
                 <div className="gdiv10"><button onClick={() => setGenre('36')} id="genre">History</button></div>
-                <div className="gdiv11"><button onClick={() => setGenre('99')} id="genre">Documentary</button></div>
+                <div className="gdiv11"><button onClick={() => setGenre('37')} id="genre">Western</button></div>
                 <div className="gdiv12"><button onClick={() => setGenre('9648')} id="genre">Mystery</button></div>
             </div>
             <div className="MovieParent">
