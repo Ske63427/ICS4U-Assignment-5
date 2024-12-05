@@ -11,7 +11,7 @@ function Header(){
                 </Link>
             </div>
             <div className="search">
-                <input id="search" type="text" placeholder="Search"></input>
+                <input style={{color: "black"}} id="search" type="text" placeholder="Search"></input>
             </div>
             <div className="pages">
                 <Link to={`/register`} className="button" id="button-1" href="#">Register</Link>

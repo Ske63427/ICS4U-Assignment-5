@@ -1,6 +1,8 @@
 function FakeSocialMediaView() {
     return(
-        <div></div>
+        <div>
+            <h1>Social Media</h1>
+        </div>
     )
 }
 
