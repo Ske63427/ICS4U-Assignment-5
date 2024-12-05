@@ -51,9 +51,10 @@
     text-decoration: none;
     display: inline-block;
     border-radius: 10px;
+    width: 150px;
 }
 
-#button-2{
-    margin-right: 7.5%;
-    margin-left: 7.5%
-}
+/*#button-2{*/
+/*    margin-right: 7.5%;*/
+/*    margin-left: 7.5%*/
+/*}*/

@@ -42,7 +42,7 @@
     grid-template-columns: 1vw repeat(5, 1fr) 1vw;
     grid-template-rows: 1fr repeat(4, 433.6px) 1fr;
     grid-column-gap: 10px;
-    grid-row-gap: 0px;
+    grid-row-gap: 5px;
 }
 
 .div1 {grid-area: 2 / 2 / 3 / 3;}
@@ -69,9 +69,16 @@
 #genrePoster{
     border-radius: 15px;
     background-color: gray;
-    position: relative;
 }
 
-img{
-    position: static;
+#movieInfo{
+    visibility: hidden;
+    background-color: transparent;
+    margin-top: 5px;
 }
+
+#poster:hover > #movieInfo{
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+

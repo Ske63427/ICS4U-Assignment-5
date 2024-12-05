@@ -4,6 +4,8 @@ import axios from "axios";
 // import { Link } from "react-router-dom";
 
 function Genre(){
+
+    const user = "Aidan"; {/*change this to username prop from login*/}
     const [movies, setMovies] = useState([])
     const [genre, setGenre] = useState('28')
 
@@ -36,90 +38,23 @@ function Genre(){
                 <div className="gdiv12"><button onClick={() => setGenre('9648')} id="genre">Mystery</button></div>
             </div>
             <div className="MovieParent">
-                {movies.length > 19 && (
+                {movies.length > 1 && (
                     <>
-                        <div className="div1">
-                            {/*<h2>{movies[0].original_title}</h2>*/}
-                            {/*<p>{movies[0].release_date}</p><br/>*/}
-                            {/*<p>{movies[0].overview}</p>*/}
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[0].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div2">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[1].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div3">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[2].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div4">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[3].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div5">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[4].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div6">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[5].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div7">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[6].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div8">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[7].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div9">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[8].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div10">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[9].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div11">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[10].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div12">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[11].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div13">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[12].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div14">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[13].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div15">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[14].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div16">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[15].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div17">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[16].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div18">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[17].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div19">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[18].poster_path}`} alt={"poster"}/>
-                        </div>
-
-                        <div className="div20">
-                            <img id="genrePoster" src={`https://image.tmdb.org/t/p/w500${movies[19].poster_path}`} alt={"poster"}/>
-                        </div>
+                        {Array.from({length: 20 }).map((_, index) => (
+                            <div
+                                key={index}
+                                className={`div${index + 1}`}
+                                id={"poster"}
+                                style={{
+                                    backgroundImage: `url(https://image.tmdb.org/t/p/w500${movies[index].poster_path})`,
+                                    backgroundSize: 'contain',
+                                    borderRadius: '10px'
+                                }}>
+                                <h2 id={"movieInfo"}>{movies[index].title}</h2>
+                                <p id={"movieInfo"}>{movies[index].release_date}</p><br/>
+                                <p id={"movieInfo"}>{movies[index].overview}</p>
+                            </div>
+                        ))}
                     </>
                 )}
             </div>

@@ -5,7 +5,6 @@ import RegisterView from "../src/views/RegisterView.jsx";
 import PlanView from "../src/views/PlanView.jsx";
 import FakeSocialMediaView from "../src/views/FakeSocialMediaView.jsx";
 import MovieView from "../src/views/MovieView.jsx";
-// import DetailView from "../src/views/DetailView.jsx";
 import './App.css'
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
                 <Route path="/plan" element={<PlanView/>} />
                 <Route path="/socialmedia" element={<FakeSocialMediaView/>} />
                 <Route path="/movie" element={<MovieView/>} />
-                    {/*<Route path="/movie/:id" element={<DetailView/>} />*/}
             </Routes>
         </BrowserRouter>
     )
