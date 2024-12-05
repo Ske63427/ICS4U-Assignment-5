@@ -14,7 +14,7 @@ function Header(){
                 <input id="search" type="text" placeholder="Search"></input>
             </div>
             <div className="pages">
-                {/*<Link to={`/movie`} className="button" id="button-1" href="#">Movies</Link>*/}
+                <Link to={`/register`} className="button" id="button-1" href="#">Register</Link>
                 <Link to={`/login`} className="button" id="button-2" href="#">Login</Link>
             </div>
         </div>
